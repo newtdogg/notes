@@ -1,7 +1,11 @@
-expect = function(parameter){
-
+function Expect(parameter){
+  this.parameter = parameter
 }
 
-expect.toEqual = function(parameter){
-  return parameter
+expect = function(parameter){
+  return new Expect(parameter)
+}
+
+Expect.prototype.toEqual = function(parameter){
+  return this.parameter === parameter
 }
