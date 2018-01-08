@@ -23,9 +23,11 @@ Expect.prototype.toEqual = function (parameter) {
 
 Expect.prototype.formatResult = function() {
   if (!this.result) {
-    console.log(`Expected ${this.parameter}${this.qualifier} ${this.message}`)
+    document.getElementById('tests').innerHTML += 
+    `<div>Expected ${this.parameter}${this.qualifier} ${this.message}</div>`
   } else {
-    console.log(`test passed`)
+    document.getElementById('tests').innerHTML += 
+    `<div>Test passed</div>`
   }
 }
 
