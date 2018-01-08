@@ -1,8 +1,6 @@
-textbox = 'noteText'
-display = "display"
 
 postnote = function(){
-input = document.getElementbyId(textbox).innerHTML
+input = document.getElementById('noteText').value
 
-document.getElementbyId(display).innerHTML += input
+document.getElementById('noteDisplay').innerHTML +=  "<li>" +input +"</li>"
 }

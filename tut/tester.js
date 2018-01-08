@@ -1,7 +1,7 @@
 function Expect(parameter) {
   this.parameter = parameter
   this.result = false
-  this.qualifier = ""
+  this.message = ""
 }
 
 expect = function (parameter) {
@@ -24,7 +24,7 @@ Expect.prototype.toEqual = function (parameter) {
 Expect.prototype.formatResult = function() {
   if (!this.result) {
     document.getElementById('tests').innerHTML += 
-    `<div>Expected ${this.parameter}${this.qualifier} ${this.message}</div>`
+    `<div>Expected ${this.parameter} ${this.message}</div>`
   } else {
     document.getElementById('tests').innerHTML += 
     `<div>Test passed</div>`
