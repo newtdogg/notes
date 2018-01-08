@@ -1,2 +1,6 @@
-console.log(expect(1).toEqual(1))
-console.log(dont(expect(1).toEqual(2)))
+describe("Can compare",[
+  expect(1).toEqual(1),
+  dont(expect(1).toEqual(2)),
+  expect(1).toEqual(2),
+  dont(expect(1).toEqual(1))
+]);
