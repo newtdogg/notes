@@ -1,3 +1,8 @@
+// Array.prototype.last = function(){
+//   return this[this.length-1]
+// }
+
+
 function Expect(parameter) {
   this.parameter = parameter
   this.result = false
@@ -31,9 +36,22 @@ Expect.prototype.formatResult = function() {
   }
 }
 
-describe = function(name, tests){
-  console.log(name)
-  tests.forEach(function(test) {
-    test.formatResult()
- })
-}
+describe = function(name, its){
+  its.forEach(function(arr) {
+    arr.forEach(function(test) {
+      test.formatResult()
+    })
+  })
+};
+
+it = function(name, lines){
+  arr = []
+  lines.forEach(function(line) {
+    if (typeof(line) === 'object') {arr.push(line)}
+  })
+  return arr
+};
+
+// it = function(name, lines){
+//    return lines.last()
+// };

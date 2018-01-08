@@ -1,6 +1,10 @@
 describe("Can compare",[
-  expect(1).toEqual(1),
-  dont(expect(1).toEqual(2)),
-  expect(1).toEqual(2),
-  dont(expect(1).toEqual(1))
+	it("passing tests",[
+		expect(1).toEqual(1),
+  		dont(expect(1).toEqual(2))
+  	]),
+  	it("failing tests",[
+  		expect(1).toEqual(2),
+  		dont(expect(1).toEqual(1))
+  	])
 ]);
