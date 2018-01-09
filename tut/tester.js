@@ -24,10 +24,10 @@ Expect.prototype.toEqual = function (parameter) {
 Expect.prototype.formatResult = function () {
   if (!this.result) {
     document.getElementById('tests').innerHTML +=
-      `<div>Expected ${this.parameter} ${this.message}</div>`
+      `<div><h5 style="color: red;">Expected ${this.parameter} ${this.message}</h5></div>`
   } else {
     document.getElementById('tests').innerHTML +=
-      `<div>Test passed</div>`
+      `<div><h5 style="color: green;">Test passed</h5></div>`
   }
 }
 
