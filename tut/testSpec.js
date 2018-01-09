@@ -1,4 +1,4 @@
-describe("Can compare",[
+describe("Tut Tester",[
 	it("passing tests",[
 		expect(1).toEqual(1),
   		dont(expect(1).toEqual(2))
