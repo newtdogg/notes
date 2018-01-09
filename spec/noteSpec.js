@@ -14,6 +14,12 @@ describe("Note",[
 	]),
 
 	it("can display the first 20 characters",[
-		expect(note.summary).toEqual("Lorem ipsum dolor si...")
+		expect(note.summary).toEqual("Lorem ipsum dolor si")
 	])
+	//,
+
+	// it("only adds elipsis to notes over 20 characters", [
+	// 	note.add("Hello"),
+	// 	dont(expect(note.summary).toEqual("Hello..."))
+	// ])
 ])

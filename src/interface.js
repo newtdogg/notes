@@ -3,7 +3,7 @@ notebook = new Notebook
 printAllNotes = function(){
   var listOfNotes = ""
   notebook.notes.forEach(function(note){
-    listOfNotes += ("<li>" + note.summary + "</li>")
+    listOfNotes += ("<li>" + note.getText() + "<div onclick=''  >...</div> </li>")
   })
   document.getElementById('noteDisplay').innerHTML = listOfNotes
 }
