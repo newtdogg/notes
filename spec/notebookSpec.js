@@ -11,9 +11,5 @@ describe("Notebook", [
 	it("Can store notes", [
 		notebook.add(note),
 		expect(notebook.notes).toContain(note)
-		]),
-	it("Can return all the note summaries", [
-		]),
-	it("Can return a whole note", [
 		])
 	])
