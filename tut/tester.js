@@ -20,6 +20,12 @@ Expect.prototype.toEqual = function (parameter) {
   return this
 }
 
+Expect.prototype.toContain = function(parameter) {
+  this.message = `to contain ${parameter}` 
+  this.result = this.parameter.includes(parameter)
+  return this
+}
+
 
 Expect.prototype.formatResult = function () {
   if (!this.result) {
