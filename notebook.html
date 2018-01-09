@@ -1,26 +1,27 @@
 <html>
 
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src= './src/interface.js'> </script>
-  </head>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src='./src/interface.js'> </script>
+</head>
 
-  <body>
-    <div class="row">
-      <div class="col-sm-3">
-      </div>
-      <div class="col-sm-6">
-        <form>
-          <input id="noteText" type="text" name="addNote">
-          <input type="button" onclick="postnote()">
-        </form>
-        <div id="noteDisplay">
-        </div>
-      </div>
-      <div class="col-sm-3">
+<body class="container">
+  <div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-6">
+      <form>
+        <textarea id="noteText" rows="4" cols="50"></textarea>
+        <input type="button" onclick="postnote()" value='Add Note'>
+      </form>
+      <h1>Notes</h1>
+      <div id="noteDisplay">
       </div>
     </div>
-  </body>
-
+    <div class="col-sm-3">
+    </div>
+  </div>
+</body>
 </html>
