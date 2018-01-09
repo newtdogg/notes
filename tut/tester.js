@@ -21,7 +21,7 @@ Expect.prototype.toEqual = function (parameter) {
 }
 
 Expect.prototype.toContain = function(parameter) {
-  this.message = `to contain ${parameter}` 
+  this.message = `to contain ${parameter}`
   this.result = this.parameter.includes(parameter)
   return this
 }
@@ -30,20 +30,20 @@ Expect.prototype.toContain = function(parameter) {
 Expect.prototype.formatResult = function () {
   if (!this.result) {
     document.getElementById('tests').innerHTML +=
-      `<div class="test" ><h5 style="color: red;">Expected ${this.parameter} ${this.message}</h5></div>`
+      `<div class="test"><h5 style="color: red;">Expected ${this.parameter} ${this.message}</h5></div>`
   } else {
     document.getElementById('tests').innerHTML +=
-      `<div class="test" ><h5 style="color: green;">Test passed</h5></div>`
+      `<div class="test"><h5 style="color: green;">Test passed</h5></div>`
   }
 }
 
 describe = function (name, its) {
-  document.getElementById('tests').innerHTML += `<div><h3>${name}</h3></div>`;
+  document.getElementById('tests').innerHTML += `<div class="testTitle"><h3>${name}</h3></div>`;
   its.forEach(function (test) {
     test.run()
   })
   // document.getElementById('tests').innerHTML += ;
- 
+
 };
 
 function Test(name, lines){
@@ -52,7 +52,7 @@ function Test(name, lines){
 }
 
 Test.prototype.run = function(){
-  document.getElementById('tests').innerHTML += `<div class="test"><h4>${this.name}</h4></div>`;
+  document.getElementById('tests').innerHTML += `<div id="tests" class="container-flex it-title"><h4>${this.name}</h4></div>`;
   this.lines.forEach(function(line){
     if (typeof (line) === 'object'){ line.formatResult()}
   })
