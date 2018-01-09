@@ -39,17 +39,23 @@ Expect.prototype.formatResult = function () {
 
 describe = function (name, its) {
   document.getElementById('tests').innerHTML += `<h3>${name}</h3>`;
-  its.forEach(function (arr) {
-    arr.forEach(function (test) {
-      test.formatResult()
-    })
+  its.forEach(function (test) {
+    test.run()
   })
 };
 
-it = function (name, lines) {
-  arr = []
-  lines.forEach(function (line) {
-    if (typeof (line) === 'object') { arr.push(line) }
+function Test(name, lines){
+  this.name = name
+  this.lines = lines
+}
+
+Test.prototype.run = function(){
+  document.getElementById('tests').innerHTML += `<h4 style="position: left, 20px;">${this.name}</h4>`;
+  this.lines.forEach(function(line){
+    if (typeof (line) === 'object'){ line.formatResult()}
   })
-  return arr
+}
+
+it = function (name, lines) {
+  return (new Test(name,lines))
 };
