@@ -2,6 +2,13 @@ body {
   padding-top: 10%;
 }
 
-.test{
-	padding-left: 20px;
+.test {
+  padding-left: 20px;
+}
+
+.well {
+  width: 100%;
+  height: auto;
+  display: table;
+  vertical-align: middle;
 }

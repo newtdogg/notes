@@ -2,7 +2,7 @@ notebook = new Notebook
 printAllNotes = function(){
   var listOfNotes = ""
   notebook.notes.forEach(function(note){
-    listOfNotes += (`<li id=${notebook.notes.indexOf(note)} onClick="changeView(this.id)">` + note.getText() + `</li>`)
+    listOfNotes += (`<div class="well" id=${notebook.notes.indexOf(note)} onClick="changeView(this.id)">` + note.getText() + `</div>`)
   })
   document.getElementById('noteDisplay').innerHTML = listOfNotes
 }
